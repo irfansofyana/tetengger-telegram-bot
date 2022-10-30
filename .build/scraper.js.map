@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../scraper.ts"],
+  "sourcesContent": ["import axios from 'axios';\n\nconst baseURL: string = 'https://web2markdown-api.vercel.app/api/convert';\n\nexport interface Content {\n  url: string;\n  data: string;\n  title?: string;\n  domain?: string;\n}\n\nexport async function scrapContent(url: string): Promise<Content> {\n  try {\n    const response = await axios.post(baseURL, {\n      url: url\n    })\n    return response.data as Content;\n  } catch (err) {\n    console.error(err);\n    throw err;\n  }\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAElB,MAAM,UAAkB;AASxB,4BAAmC,KAA+B;AAChE,MAAI;AACF,UAAM,WAAW,MAAM,qBAAM,KAAK,SAAS;AAAA,MACzC;AAAA;AAEF,WAAO,SAAS;AAAA,WACT,KAAP;AACA,YAAQ,MAAM;AACd,UAAM;AAAA;AAAA;",
+  "names": []
+}
