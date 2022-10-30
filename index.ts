@@ -53,7 +53,6 @@ bot.on('message', async ctx => {
     }
   }
 
-
   const results = { 'failed': [], 'succeed': [] }
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i];

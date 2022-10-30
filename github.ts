@@ -13,7 +13,7 @@ export async function saveContent(content: Content, tags: Array<string>) {
     }
     metadata += '\n---\n'
 
-    const disclaimerText: string = `DISCLAIMER: This is bookmarked article just for easy reference, please go to [here](${content.url}) to see the original article.`
+    const disclaimerText: string = `**DISCLAIMER: This is bookmarked article just for easy reference, please go to [here](${content.url}) to see the original article.**`
 
     return `${metadata}\n${disclaimerText}\n${content.data}`
   }
