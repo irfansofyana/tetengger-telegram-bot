@@ -39,7 +39,7 @@ tags:`;
 - ${tags[i]}`;
     }
     metadata += "\n---\n";
-    const disclaimerText = `DISCLAIMER: This is bookmarked article just for easy reference, please go to [here](${content.url}) to see the original article.`;
+    const disclaimerText = `**DISCLAIMER: This is bookmarked article just for easy reference, please go to [here](${content.url}) to see the original article.**`;
     return `${metadata}
 ${disclaimerText}
 ${content.data}`;
